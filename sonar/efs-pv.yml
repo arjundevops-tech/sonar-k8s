@@ -5,7 +5,7 @@ metadata:
   namespace: sonar
 spec:
   capacity:
-    storage: 50Gi  # Adjust the storage size as needed
+    storage: 5Gi  # Adjust the storage size as needed
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany  # EFS supports ReadWriteMany
@@ -15,5 +15,4 @@ spec:
     - nfsvers=4.1
   csi:
     driver: efs.csi.aws.com
-    volumeHandle: fs-0745637bc0be9d010  # Replace with your EFS file system ID
-
+    volumeHandle: fs-0745637bc0be9d010
