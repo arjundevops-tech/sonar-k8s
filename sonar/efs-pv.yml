@@ -15,5 +15,5 @@ spec:
     - nfsvers=4.1
   csi:
     driver: efs.csi.aws.com
-    volumeHandle: <YOUR_EFS_FILE_SYSTEM_ID>  # Replace with your EFS file system ID
+    volumeHandle: fs-0745637bc0be9d010  # Replace with your EFS file system ID
 
