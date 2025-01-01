@@ -15,7 +15,7 @@ pipeline {
          }
        }
      }
-     stage ("sonar deployment into eks'){
+     stage ('sonar deployment into eks'){
             steps {
               script {
                 sh "kubectl apply -f sonar
