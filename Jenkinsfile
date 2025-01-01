@@ -10,11 +10,11 @@ pipeline {
                         export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
                         export AWS_DEFAULT_REGION=us-east-2
                         aws eks update-kubeconfig --region us-east-2 --name staging-demo
-                        kubectl apply -f sonar/namespace.yml
-                        kubectl apply -f sonar/efs-pv.yml
-                        kubectl apply -f sonar/efs-pvc.yml
-                        kubectl apply -f sonar/deployment.yml
-                        kubectl apply -f sonar/service.yml
+                        kubectl delete -f sonar/namespace.yml
+                        kubectl delete -f sonar/efs-pv.yml
+                        kubectl delete -f sonar/efs-pvc.yml
+                        kubectl delete -f sonar/deployment.yml
+                        kubectl delete -f sonar/service.yml
                         
                     """
             }
