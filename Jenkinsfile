@@ -10,7 +10,7 @@ pipeline {
                         export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
                         export AWS_DEFAULT_REGION=us-east-2
                         aws eks update-kubeconfig --region us-east-2 --name staging-demo
-                        kubeclt get nodes
+                        kubectl get nodes
                     """
             }
          }
