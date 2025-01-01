@@ -1,1 +1,19 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: sonar-pv
+  namespace: sonar
+spec:
+  capacity:
+    storage: 50Gi  # Adjust the storage size as needed
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany  # EFS supports ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: efs-storage
+  mountOptions:
+    - nfsvers=4.1
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: <YOUR_EFS_FILE_SYSTEM_ID>  # Replace with your EFS file system ID
 
